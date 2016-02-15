@@ -31,6 +31,7 @@ row_count = 0
 start_time = time.time()
 table_name = "rfic"
 
+
 def connect_to_hbase():
     """ Connect to HBase server.
 
