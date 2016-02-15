@@ -1,5 +1,24 @@
 #!/usr/bin/env python
 
+"""
+Insert data into HBase with a Python script.
+
+To create the table, first use the hbase shell. We are going to create a
+namespace called "sample_data". The table for this script is called "rfic",
+as we will be inserting Request for Information Cases from the City of
+Indianapolis.
+
+Our table will have only one column family named "data", and we are accepting
+all table defaults.
+
+Original data source
+https://data.indy.gov/dataset/Request-for-Information-Cases/ts4b-8qa9
+
+% hbase shell
+hbase> create_namespace "sample_data"
+hbase> create "sample_data:rfic", "data"
+"""
+
 import csv
 import happybase
 import time
